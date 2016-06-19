@@ -1,5 +1,5 @@
 ---
-title: "36-723 Hidden Markov Models : Homework 2"
+title: "36-723 Hidden Markov Models : Final Project"
 subtitle: "Rodu, Section A"
 author: "Michael Rosenberg, mmrosenb@andrew.cmu.edu"
 date: "`r format(Sys.time(), '%d %B, %Y')`"

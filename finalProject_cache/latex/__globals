@@ -1,0 +1,25 @@
+datasetLoadin	paste0	read.csv
+plotTimeSeries	$	$<-	as.Date	c	length	lines	max	min	plot
+genRelativePrice	[<-	$	$<-	c	length	lines	max	min	plot
+plotPrevRelativePrice	<	$	c	length	lines	max	min	plot	prevTimeFrame	which
+plotWithoutParticularOutlier	$	c	length	lines	max	min	outlierTime	plot
+fitTwoStateModelOnCurrentData	$	BaumWelch	bwcontrol	c	dim	dthmm	list	matrix
+graphOfTransitions	==	$	$<-	as.Date	c	currentTimeFrameMod.hmm	ifelse	length	max	min	plot	segments	Viterbi
+unnamed-chunk-1	
+checkEmissionDistributions	!=	^	==	$	c	currentTimeFrame	currentTimeFrameMod.hmm	curve	dnorm	fitted	hist	length	lines	lineWidth	npudens	order	par	Viterbi	which	x
+helperFunctions	[<-	&	<	==	>	for	if	matrix	rep	return	runif	sum
+performStateSelection	[<-	$	BaumWelch	bwcontrol	dim	dthmm	for	generateRandomInitStateVec	generateRandomTransitionMat	list	rep
+generateStateSelectionPlt	c	logLikeVec	max	min	paste0	pchVal	plot	points
+fitCurrentTimeFrameMod	$	BaumWelch	bwcontrol	currentTimeFrame	dthmm	generateRandomInitStateVec	generateRandomTransitionMat	list	rep
+performStateSelection2000to2006	[<-	$	BaumWelch	bwcontrol	dim	dthmm	for	generateRandomInitStateVec	generateRandomTransitionMat	list	rep
+plotPrevTimeFrameLogLike	c	logLikeVec	max	min	paste0	pchVal	plot	points
+prevTimeFrameFit	$	BaumWelch	bwcontrol	dthmm	generateRandomInitStateVec	generateRandomTransitionMat	list	prevTimeFrame	rep
+checkPrevTimeFrameModDistributions	^	==	$	c	curve	dnorm	fitted	hist	length	lines	lineWidth	npudens	order	par	prevTimeFrame	prevTimeFrameMod.hmm	Viterbi	which	x
+makeInitProbTable	$	as.data.frame	c	colnames<-	currentTimeFrameMod.hmm	kable	rownames<-	t
+makeTransitionProbabilityTable	$	c	colnames<-	currentTimeFrameMod.hmm	kable	rownames<-	sigLev	signif
+graphOfPrevTimeTransitions	==	$	$<-	as.Date	c	ifelse	length	max	min	plot	prevTimeFrameMod.hmm	segments	Viterbi
+plotEmissionDistributions	$	c	currentTimeFrameMod.hmm	dnorm	lines	lineWidth	max	plot	seq
+showInitialProbVecForPrevTimeFrameMod	
+makeInitProbTableForPrevTimeMod	$	as.data.frame	c	colnames<-	kable	prevTimeFrameMod.hmm	rownames<-	t
+makeTransitionProbabilityTableForPrevTimeMod	$	c	colnames<-	kable	prevTimeFrameMod.hmm	rownames<-	sigLev	signif
+plotEmissionDistributionsFor2000To2006	$	c	dnorm	lines	lineWidth	max	plot	prevTimeFrameMod.hmm	seq
